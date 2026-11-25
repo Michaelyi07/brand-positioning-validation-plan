@@ -1,0 +1,22 @@
+# SECTION A: basic info (one row per interview)
+record_id,respondent_code,role_code,consent_status,consent_form_id,date,duration_min,mode
+REC-001,R01,founder,recorded,CF-001,2027-01-10,52,online
+# SECTION B: per-question log (one row per question answered)
+question_id,answer_summary,probe,critical_incident,theme_match,spend_evidence
+Q02,hardest_part=vetting_supplier_reliability;two_weeks_delayed,"why was that hard? what did you check?",yes,-,-
+# SECTION C: quote log (one row per kept verbatim quote)
+quote_id,verbatim_anon,respondent_code,external_use
+QT-001,"finding the right partner took us [company] almost a quarter",R01,restricted
+# SECTION D: preference results (one row per pair, plus one ranking row per respondent)
+pair_id,winner,respondent_code,rank
+P1,VP-A,R01,-
+P2,VP-A,R01,-
+P3,VP-B,R01,-
+RANK,-,R01,VP-A>VP-B>VP-C
+# SECTION E: screening log (one row per screened criterion, before invitation)
+screen_id,respondent_code,criterion,value,pass,channel,notes
+SC-001,R01,S3_tenure,14_months_band_6-24,pass,member_directory,-
+SC-001,R01,S2_activity_6mo,7_interactions,pass,member_directory,-
+# SECTION F: decision log (one row per decision criterion evaluated)
+criterion,observed,pass_fail
+J1_preference_holds,VP-A:3/3_pairs;0.67_top_rank;valid_n=9,pass

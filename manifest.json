@@ -1,0 +1,31 @@
+{
+  "package": "brand-positioning-validation-plan",
+  "pid": 2327,
+  "ticket": "S1-BRAND-020",
+  "design_only": true,
+  "fictional_examples_only": true,
+  "client_name_included": false,
+  "consent_required_for_recording": true,
+  "files": [
+    {"name": "interview_guide.md", "purpose": "Consent block + 18-question semi-structured interview guide (6 needs / 6 alternatives / 6 value-proposition feedback, each with purpose, flow, probe)"},
+    {"name": "preference_test_plan.md", "purpose": "Paired-comparison preference test for 3 fictional value propositions: 3 unique pairs, balanced order, sample 8-12 (floor 8), ballot validity rules, decision criteria (>=2/3 pair wins AND >=60% top rank), documented follow-up, overall validation criteria J1-J4"},
+    {"name": "screening_criteria.md", "purpose": "Sample screening: inclusion thresholds S1-S6, exclusions X1-X5, screening-log usage"},
+    {"name": "results_recording_template.md", "purpose": "Six-section fixed-field recording template with value dictionary and fictional example rows"},
+    {"name": "recording_template.csv", "purpose": "Copy-and-fill CSV version of the recording template"},
+    {"name": "verify_gates.py", "purpose": "Automated acceptance-gate checks (15 checks across G1-G8, dynamic count)"},
+    {"name": "verification_log.md", "purpose": "Real run output of verify_gates.py with environment"},
+    {"name": "README.md", "purpose": "Package overview, run instructions, AC-to-file mapping"},
+    {"name": "manifest.json", "purpose": "This manifest"}
+  ],
+  "checks": {
+    "question_count": 18,
+    "tag_blocks": {"needs": 6, "alternatives": 6, "value_proposition_feedback": 6},
+    "preference_method": "paired_comparison_3_pairs_balanced_order",
+    "sample_n": "8-12_screened_floor_8",
+    "decision_criteria": "wins>=2_of_3_pairs_AND_top_rank>=60pct_no_consensus_documented_followup",
+    "template_sections": 6,
+    "coding_fields": "theme_match(TC-NET/TC-KNOW/TC-ONE)_spend_evidence_frozen_before_fielding",
+    "verify_gates": "15/15 pass dynamic count (see verification_log.md)",
+    "rotation_balance": "per_VP_left12_right12_each_pair_each_position_x4"
+  }
+}
